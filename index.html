@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turf Titans - Premier Sports Facility in Goa</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .sport-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Hero Section -->
+    <header class="gradient-bg text-white">
+        <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="data:image/png;base64,YOUR_BASE64_LOGO" alt="Turf Titans Logo" class="h-16">
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#sports" class="hover:text-red-500">Sports</a>
+                <a href="#booking" class="hover:text-red-500">Book Now</a>
+                <a href="#contact" class="hover:text-red-500">Contact</a>
+            </div>
+        </nav>
+
+        <div class="container mx-auto px-4 py-16 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to Turf Titans</h1>
+            <p class="text-xl mb-8">Your Premier Sports Destination in Goa</p>
+            <a href="#booking" class="bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition">Book Now</a>
+        </div>
+    </header>
+
+    <!-- Sports Categories -->
+    <section id="sports" class="py-16 container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Our Sports Facilities</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+            <!-- Outdoor Sports -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-2xl font-bold mb-4 text-red-600">Outdoor Sports</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="sport-card p-4 border rounded-lg">
+                        <i class="bi bi-football text-3xl text-red-600"></i>
+                        <h4 class="font-bold mt-2">Football</h4>
+                        <p class="text-sm text-gray-600">₹1200 (7AM-6PM)<br>₹1400 (6PM-1AM)</p>
+                    </div>
+                    <!-- Add more outdoor sports similarly -->
+                </div>
+            </div>
+
+            <!-- Indoor Sports -->
+            <div class="bg-white rounded-lg shadow-lg p-6">
+                <h3 class="text-2xl font-bold mb-4 text-red-600">Indoor Sports</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="sport-card p-4 border rounded-lg">
+                        <i class="bi bi-table text-3xl text-red-600"></i>
+                        <h4 class="font-bold mt-2">Table Tennis</h4>
+                        <p class="text-sm text-gray-600">₹1000 (7AM-6PM)<br>₹1100 (6PM-1AM)</p>
+                    </div>
+                    <!-- Add more indoor sports similarly -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Book Your Sport</h2>
+            <form class="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8" id="bookingForm">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block mb-2">Sport Type</label>
+                        <select class="w-full p-2 border rounded" id="sportType" required>
+                            <option value="">Select Sport</option>
+                            <option value="football">Football</option>
+                            <option value="cricket">Cricket</option>
+                            <!-- Add more sports options -->
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block mb-2">Date</label>
+                        <input type="date" class="w-full p-2 border rounded" id="bookingDate" required>
+                    </div>
+                    <div>
+                        <label class="block mb-2">Time Slot</label>
+                        <select class="w-full p-2 border rounded" id="timeSlot" required>
+                            <option value="">Select Time</option>
+                            <!-- Time slots will be populated via JavaScript -->
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block mb-2">Booking Type</label>
+                        <select class="w-full p-2 border rounded" id="bookingType" required>
+                            <option value="regular">Regular Booking</option>
+                            <option value="corporate">Corporate Booking</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-red-600 text-white py-3 rounded mt-6 hover:bg-red-700">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+                    <p>Turf Titans, Goa</p>
+                    <p>Phone: +91 XXXXXXXXXX</p>
+                    <p>Email: info@turftitans.com</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Operating Hours</h3>
+                    <p>8:00 AM - 1:00 AM</p>
+                    <p>All days of the week</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-red-500"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="hover:text-red-500"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="hover:text-red-500"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Populate time slots based on selected sport and date
+        document.getElementById('sportType').addEventListener('change', updateTimeSlots);
+        document.getElementById('bookingDate').addEventListener('change', updateTimeSlots);
+
+        function updateTimeSlots() {
+            const timeSlotSelect = document.getElementById('timeSlot');
+            timeSlotSelect.innerHTML = '<option value="">Select Time</option>';
+            
+            const startTime = 8; // 8 AM
+            const endTime = 25; // 1 AM next day (25 represents 1 AM)
+            
+            for (let i = startTime; i < endTime; i++) {
+                const hour = i % 24;
+                const nextHour = (i + 1) % 24;
+                const timeSlot = `${hour.toString().padStart(2, '0')}:00 - ${nextHour.toString().padStart(2, '0')}:00`;
+                const option = document.createElement('option');
+                option.value = timeSlot;
+                option.textContent = timeSlot;
+                timeSlotSelect.appendChild(option);
+            }
+        }
+
+        // Handle form submission
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Add your booking logic here
+            alert('Booking submitted successfully! We will contact you shortly.');
+            this.reset();
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
